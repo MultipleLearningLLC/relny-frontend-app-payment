@@ -97,7 +97,7 @@ class ProductLineItem extends React.PureComponent {
         </div>
         <div className="col-7">
           <h6 className="m-0" aria-level="3">{title}</h6>
-          <p className="m-0">{this.renderCertificateType(certificateType, courseKey)}</p>
+          {/* <p className="m-0">{this.renderCertificateType(certificateType, courseKey)}</p> */ }
           {isNumEnrolledExperiment
             ? this.renderEnrollmentCount(courseKey, enrollmentCountData) : null}
         </div>
