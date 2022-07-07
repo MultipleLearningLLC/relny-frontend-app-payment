@@ -138,7 +138,7 @@ class Checkout extends React.Component {
 
             <PayPalButton
               onClick={this.handleSubmitPayPal}
-              className={classNames(' btn btn-warning text-center btn-lg', { 'skeleton-pulse': loading })}
+              className={classNames(' btn btn-warning text-center btn-lg d-flex align-items-center', { 'skeleton-pulse': loading })}
               disabled={submissionDisabled}
               style={{color: 'white'}}
               isProcessing={payPalIsSubmitting}
@@ -147,6 +147,7 @@ class Checkout extends React.Component {
             {/* Apple Pay temporarily disabled per REV-927  - https://github.com/edx/frontend-app-payment/pull/256 */}
           </p>
         </div>
+        {/* 
         <div>
           <h5 aria-level="2">
             Dont have a PayPal Account? 
@@ -189,6 +190,7 @@ class Checkout extends React.Component {
 
           <p style={{marginTop: "3rem"}}>If you have any issues following this process feel free to contact us at <a href="#">payments@relny.com</a></p>
         </div>
+        */}
         {/*
         <PaymentForm
           onSubmitPayment={this.handleSubmitCybersource}
