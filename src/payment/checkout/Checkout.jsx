@@ -14,6 +14,7 @@ import CheckoutStep1 from "./assets/checkoutstep1.png"
 import CheckoutStep2 from "./assets/checkoutstep2.png"
 import CheckoutStep3 from "./assets/checkoutstep3.png"
 import CheckoutStep4 from "./assets/checkoutstep4.png"
+import SecurePayments from "./assets/securepayments.png"
 
 import PaymentForm from './payment-form/PaymentForm';
 import FreeCheckoutOrderButton from './FreeCheckoutOrderButton';
@@ -118,6 +119,8 @@ class Checkout extends React.Component {
     return (
       <>
         <div className={'basket-section-custom'} style={{marginBottom: '10px!important'}}>
+          
+          
           <h5 aria-level="2">
             <FormattedMessage
               id="payment.select.payment.method.heading"
@@ -138,14 +141,17 @@ class Checkout extends React.Component {
 
             <PayPalButton
               onClick={this.handleSubmitPayPal}
-              className={classNames(' btn btn-warning text-center btn-lg d-flex align-items-center', { 'skeleton-pulse': loading })}
+              className={classNames('btn btn-warning text-center btn-lg d-flex align-items-center justify-content-center', { 'skeleton-pulse': loading })}
               disabled={submissionDisabled}
-              style={{color: 'white'}}
+              style={{color: 'white', maxWidth: "450px", width: "100%"}}
               isProcessing={payPalIsSubmitting}
             />
 
+            
+
             {/* Apple Pay temporarily disabled per REV-927  - https://github.com/edx/frontend-app-payment/pull/256 */}
           </p>
+          <img style={{width: "100%", maxWidth: "450px"}} src={SecurePayments} />
         </div>
         {/* 
         <div>
